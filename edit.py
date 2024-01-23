@@ -1,4 +1,5 @@
 from PIL import Image, ImageOps, ImageGrab
+from matplotlib import pyplot as plt
 
 MAX = 256
 HUE_SHIFT_DEG = MAX // 2
@@ -61,8 +62,11 @@ final_png_image = Image.merge("RGBA", \
 
 # Display image
 # Doesn't copy to clipboard
-final_png_image.show()
+plt.imshow(final_png_image)
+plt.show()
+#final_png_image.show() # Windows default image displayer is absurdly faulty
 
 # Close image if opened
 if from_file:
 	png_image.close()
+
