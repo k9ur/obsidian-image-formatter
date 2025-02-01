@@ -20,7 +20,7 @@ elif isinstance(png_image, list):
 
 # Ask whether the image should be hue-shifted
 # ... to counteract the inverted colours
-response = input("Also shift hue? (y/n) ").strip().lower()
+response = input("Keep old hue? (y/n) ").strip().lower()
 hue_shift = response == "y"
 
 
